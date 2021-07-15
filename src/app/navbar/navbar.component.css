@@ -1,7 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;600&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    background: #000;
+}
+
+h1 {
+    font-size: 50px;
+    margin-right: 80%;
+    font-family: monospace;
+    color: mediumblue;
+    text-shadow: 5px 5px 8px black
 }
 
 .container .header {
@@ -19,13 +32,4 @@
 
 .container .header img {
     width: 25%;
-}
-
-.container .header a {
-    color: #fff;
-    text-decoration: none;
-    background-color: red;
-    padding: 10px 20px;
-    margin-right: 50px;
-    border-radius: 5px;
 }
