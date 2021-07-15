@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    width: 100%;
+    padding-top: 25px;
+    padding-left:50px ;
+    z-index: 100;
+}
+
+.container .header img {
+    width: 25%;
+}
+
+.container .header a {
+    color: #fff;
+    text-decoration: none;
+    background-color: red;
+    padding: 10px 20px;
+    margin-right: 50px;
+    border-radius: 5px;
+}
