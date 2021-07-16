@@ -76,4 +76,13 @@ h1 {
     left: 50%;
     right: 5%;
     text-align: center;
+    height: unset !important;
+}
+
+h6 {
+    line-height: 1.7rem;
+}
+
+.myQuote button {
+    margin-right: 50px;
 }
