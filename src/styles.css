@@ -15,20 +15,18 @@ h1 {
 }
 
 .container .header {
-    position: absolute;
     top: 0;
     left: 0;
     display: flex;
-    justify-content:space-between ;
     align-items: center;
     width: 100%;
-    padding-top: 25px;
-    padding-left:50px ;
+    padding-top: 20px;
+    padding-left:150px ;
     z-index: 100;
 }
 
 .container .header img {
-    width: 25%;
+    width: 20%;
 }
 
 .body {
@@ -43,8 +41,9 @@ h1 {
     left: 5%;
     right: 60%;
     padding-left: 2%;
-    padding-top: 3%;
+    padding-top: 15px;
     padding-right: 2%;
+    padding-bottom: 5px;
 }
 
 .card .write-quotes input {
@@ -52,3 +51,29 @@ h1 {
     height: 80px;
 }
 
+@media (max-width: 790px) {
+    .full-height,
+    .full-height body,
+    .full-height header,
+    .full-height header .view {
+      height: 1040px;
+      padding-top: 25px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}
+
+/* .view {
+    height: 100vh !important;
+} */
+
+.part3 {
+    background-color: rgba(42, 35, 235, 0.2);
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    right: 5%;
+    text-align: center;
+}
