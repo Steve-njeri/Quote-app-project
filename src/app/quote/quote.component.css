@@ -1,0 +1,14 @@
+.card-body {
+    background: rgb(180, 219, 226);
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px 2px black;
+}
+
+.all-cards{
+    top: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: absolute;
+}
+

@@ -1,0 +1,16 @@
+.card {
+    background-color: rgba(42, 35, 235, 0.2);
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    right: 50%;
+    padding-left: 2%;
+    padding-top: 15px;
+    padding-right: 2%;
+    padding-bottom: 30px;
+} 
+
+.card .write-quotes input {
+    border-radius: 20px;
+    height: 80px;
+}

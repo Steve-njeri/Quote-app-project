@@ -4,16 +4,17 @@
             <div class="col-sm-3"></div>
             <div class="col-sm-9">
                 <div class="all-cards">
-                    <h1>QUOTE APP</h1>
-                    <div *ngFor='let quote of quotes;let i =index'>
-                        <h2>Educational quote</h2>
-                        <button class="btn btn-success">Show Details</button>
-                        <P>Be strong in christ</P>
-                        <p>Author:Stephen</p>
-                        <p>submittedby: Joy Kim</p>
-                        <p>Upvote: 0</p>
-                        <p>Downvote: 0</p>
-                        <p>completeDate: 7,17,2021</p>
+                    <div *ngFor='let quote of quotes;let i =index' class="p-3 mt-3">
+                        <div class="card-body">
+                            <P>{{ quote.description }}</P>
+                            <hr>
+                            <button (click)="showDetails(i)" class="btn btn-success">Show Details</button>
+                            <p>Author: {{ quote.author }}</p>
+                            <p>submittedby: {{ quote.submittedby }}</p>
+                            <p>Upvote: {{ quote.upvote</p>
+                            <p>Downvote: {{ quote.downvote</p>
+                            <p>completeDate: {{ quote.completeDate}}</p>
+                        </div>
                     </div>
                 </div>
             </div>
