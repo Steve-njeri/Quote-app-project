@@ -1,0 +1,43 @@
+<div class="overlay">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-9">
+                <div class="all-cards">
+                    <h1>QUOTE APP</h1>
+                    <div *ngFor='let quote of quotes;let i =index'>
+                        <h2>Educational quote</h2>
+                        <button class="btn btn-success">Show Details</button>
+                        <P>Be strong in christ</P>
+                        <p>Author:Stephen</p>
+                        <p>submittedby: Joy Kim</p>
+                        <p>Upvote: 0</p>
+                        <p>Downvote: 0</p>
+                        <p>completeDate: 7,17,2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="overlay">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3">
+                <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+            </div>
+            <div class="col-sm-9">
+                <div class="all-cards">
+                    <div *ngFor="let quote of quotes;let i = index" class="card" style="width: 24rem;"></div>
+                    <div class="card-body">
+                        <li appHighlight *ngIf='highlighter(i) && quote.upvote > 0'>{{quote.name}}</li>
+                        <li *ngIf='!highlighter(i) ||  quote.upvote === 0'>{{quote.name}}</li>
+                        <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
