@@ -16,7 +16,9 @@ export class QuoteComponent implements OnInit {
     new Quote("Friendship is the only cement that will ever hold the world together.","Woodrow T. Wilson", "ken joe",0,0, new Date(4, 11, 2019))
   ];
 
-  showDetails(index:number){ }
+  showDetails(index:number){
+    this.quotes[index].showFullDetails = !this.quotes[index].showFullDetails;
+   }
 
   constructor() { }
 

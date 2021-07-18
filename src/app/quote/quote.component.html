@@ -9,7 +9,8 @@
                             <P>{{ quote.description }}</P>
                             <hr>
                             <button (click)="showDetails(i)" class="btn btn-success">Show Details</button>
-                            <app-quote.detail [quote]="quote"></app-quote.detail>
+
+                            <app-quote-detail *ngIf="quote.showFullDetails" [quote]="quote"></app-quote-detail>
                         </div>
                     </div>
                 </div>
