@@ -1,20 +1,19 @@
 <div class="overlay">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-3"></div>
-            <div class="col-sm-9">
-                <div class="all-cards">
-                    <div *ngFor='let quote of quotes;let i =index' class="p-3 mt-3">
-                        <div class="card-body">
-                            <P>{{ quote.description }}</P>
-                            <hr>
-                            <button (click)="showDetails(i)" class="btn btn-success">Show Details</button>
-
-                            <app-quote-detail *ngIf="quote.showFullDetails" [quote]="quote"></app-quote-detail>
-                        </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="all-cards">
+                <div *ngFor='let quote of quotes;let i =index' class="p-3 mt-3">
+                    <div class="card-body">
+                        <P>{{ quote.description }}</P>
+                        <hr>
+                        <button (click)="showDetails(i)" class="btn btn-success mb-3">Show Details</button>
+                        <app-quote-detail *ngIf="quote.showFullDetails" [quote]="quote" (todeleQuote)="deleSpecQuote($event, i)"></app-quote-detail>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="col-md-6">
+            <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
         </div>
     </div>
 </div>
