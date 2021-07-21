@@ -1,4 +1,11 @@
-# Quotes
+# Quotes application
+
+## Author
+STEPHEN NJERI
+
+## Description
+A quote application where users can create quotes and have those quotes voted on whether they are terrible or are inspirational.
+Also allow the user to input delete the quote.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
 
@@ -25,3 +32,29 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Setup/Installation Requirements
+* Open Terminal {Ctrl+Alt+T}
+
+* git clone "https://github.com/Steve-njeri/Quote-app-project.git"
+
+* cd Quotes-app-project
+
+* Open  the project on VS Code/ your editor of choice
+
+## Technologies Used
+* HTML
+* CSS
+* Angular CLI
+* bootstrap
+
+## Known Bugs
+* highlight directive property does not work properly
+
+## Support and contact details
+If you want to contact me, email me on stevenjeri33@gmail.com
+
+### License
+*This project is protected under [MIT License](License)*
+
+Copyright (c) 2021 **STEPHEN NJERI**
