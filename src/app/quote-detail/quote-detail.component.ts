@@ -10,19 +10,20 @@ export class QuoteDetailComponent implements OnInit {
 
   @Input() quote!: Quote;
   @Output() todeleQuote = new EventEmitter<boolean>();
+  @Output() countUpvotes = new EventEmitter<boolean>();
+  @Output() countDownvotes = new EventEmitter<boolean>();
 
   deleteQuote(todele:boolean) {
     this.todeleQuote.emit(todele);
   }
 
-  upvotes() {
-    this.quote.upvotes = this.quote.upvotes +1;
+  upVotes(tocount:boolean) {
+    this.countUpvotes.emit(tocount);
   }
 
-  downvotes(){
-    this.quote.downvotes = this.quote.downvotes + 1;
+  downVotes(todiscount:boolean){
+    this.countDownvotes.emit(todiscount);
   }
-
 
 
   constructor() { }

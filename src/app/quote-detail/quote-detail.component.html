@@ -3,11 +3,8 @@
     <p>submittedby: {{ quote.submittedby }}</p>
     <p>Upvotes: {{ quote.upvotes }}</p>
     <p>Downvotes: {{ quote.downvotes }}</p>
-    <p>completeDate: {{ quote.completeDate }}</p> 
-                    
-</div>
-<div>
-    <button class="btn btn-primary"style="margin:25px; height: 60px; width: 100px;">Upvote </button>
-    <button class="btn btn-success" style="margin:35px; height: 60px; width: 100px;">Downvote </button>
-    <button class="btn btn-danger" (click)="deleteQuote(true)" style="margin:35px; height: 60px; width: 100px;">Delete</button>
+    <p>Time passed since the quote was created {{quote.completeDate|dateCount}} days</p> 
+    <button class="btn btn-primary" (click)="upVotes(true)" style="margin:25px; height: 60px; width: 100px;" >Upvote </button>
+    <button class="btn btn-success" (click)="downVotes(true)"style="margin:35px; height: 60px; width: 100px;">Downvote </button>
+    <button class="btn btn-danger" (click)="deleteQuote(true)" style="margin:35px; height: 60px; width: 100px;">Delete</button>               
 </div>

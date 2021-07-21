@@ -4,10 +4,16 @@
             <div class="all-cards">
                 <div *ngFor='let quote of quotes;let i =index' class="p-3 mt-3">
                     <div class="card-body">
-                        <P>{{ quote.description }}</P>
+                        <p appHighlight *ngIf="highestUpvote()===quote.upvotes && quote.upvotes>0">
+                            {{ quote.description }}
+                        </p>
+                        <P *ngIf="highestUpvote()!==quote.upvotes || quote.upvotes===0">
+                            {{ quote.description }}
+                        </P>
                         <hr>
                         <button (click)="showDetails(i)" class="btn btn-success mb-3">Show Details</button>
-                        <app-quote-detail *ngIf="quote.showFullDetails" [quote]="quote" (todeleQuote)="deleSpecQuote($event, i)"></app-quote-detail>
+                        <app-quote-detail *ngIf="quote.showFullDetails" [quote]="quote" (countUpvotes)="clickUp($event, i)" (countDownvotes)="clickDown($event, i)" (todeleQuote)="deleSpecQuote($event, i)"></app-quote-detail>
+                        
                     </div>
                 </div>
             </div>

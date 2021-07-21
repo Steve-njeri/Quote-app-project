@@ -10,10 +10,8 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes: Quote[] = [
-    new Quote("Be strong in christ","Stephen","Joy Kim", 0,0, new Date(7,17,2021)),
-    new Quote("Be strong in christ","Stephen","Joy Kim", 0,0, new Date(7,17,2021)),
-    new Quote("Be strong in christ","Stephen","Joy Kim", 0,0, new Date(7,17,2021)),
-    new Quote("Friendship is the only cement that will ever hold the world together.","Woodrow T. Wilson", "ken joe",0,0, new Date(4, 11, 2019))
+    new Quote("Find out the reason that commands you to write; see whether it has spread its roots into the very depth of your heart; confess to yourself you would have to die if you were forbidden to write.","Rainer Maria Rilke","Joy Kim", 0,0, new Date(2020,3,14)),
+    new Quote("You should write because you love the shape of stories and sentences and the creation of different words on a page. Writing comes from reading, and reading is the finest teacher of how to write.","Annie Proulx","Stephen", 0,0, new Date(2022,1,12)),
   ];
 
   addNewQuote(quote){
@@ -35,6 +33,41 @@ export class QuoteComponent implements OnInit {
       }
     }
   }
+
+  clickUp(up:boolean, index:number) {
+    if(up) {
+      this.quotes[index].upvotes++;
+    }
+    
+  }
+
+  clickDown(down:boolean, index:number) {
+    if(down) {
+      this.quotes[index].downvotes++;
+    }
+    
+  }
+
+  delQuote(i) {
+    this.quotes.splice(i, 1)
+  }
+
+  preNum:number
+  lastNum:number
+  counter:number
+
+  highestUpvote() {
+    this.preNum = 0
+    this.lastNum = 0
+
+    for(this.counter=0 ; this.counter < this.quotes.length; this.counter++) {
+      this.lastNum = this.quotes[this.counter].upvotes;
+      if(this.lastNum > this.preNum){this.preNum = this.lastNum}
+    }
+
+    return  this.preNum
+  }
+  
 
   constructor() { }
 
